@@ -1,8 +1,8 @@
 import React from "react"
-import { Header, Footer, Jumbotron, Button, Newsletter } from "../../components"
-import PairProgramSvg from "../../assets/svgs/pair-programming.svg"
-import RustaceansWorldWideSvg from "../..//assets/svgs/rustaceans-around-the-world.svg"
-import "../..//assets/styles/main.scss"
+import { Header, Footer, Jumbotron, Button, Newsletter } from "../components"
+import PairProgramSvg from "../assets/svgs/pair-programming.svg"
+import RustaceansWorldWideSvg from "../assets/svgs/rustaceans-around-the-world.svg"
+import "../assets/styles/main.scss"
 import styles from "./index.module.scss"
 
 export default () => (

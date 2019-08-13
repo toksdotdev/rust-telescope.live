@@ -3,7 +3,8 @@
   padding: 3em 0;
   color: #ffffff;
 
-  input::placeholder {
+  input::placeholder,
+  input::-ms-input-placeholder {
     text-align: center;
   }
 

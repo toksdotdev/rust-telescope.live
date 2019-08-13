@@ -1,0 +1,30 @@
+.former {
+  margin: 0;
+  padding: 3em 0;
+  color: #ffffff;
+
+  input::placeholder {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    input {
+      width: 80% !important;
+    }
+  }
+
+  input {
+    width: 50%;
+  }
+
+  .success-text {
+    padding: 5%;
+    margin-bottom: 0px;
+  }
+
+  .warning-text {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,27 @@
+.page {
+  height: 100vh;
+}
+
+.content {
+  & ul {
+    list-style-type: none;
+    position: relative;
+    list-style: none;
+    margin-left: 2px;
+    padding-left: 2em;
+  }
+
+  & ul li::before {
+    content: "🦀";
+    position: absolute;
+    left: 0;
+    // padding: 10px;
+    // border-radius: 50% !important;
+    // list-style-image: linear-gradient(#ddd, #666);
+  }
+}
+
+// .newsletter {
+//   text-align: "center";
+//   padding: "5% 8px 0 8px";
+// }

@@ -1,0 +1,18 @@
+.content {
+  padding: 5% 4%;
+}
+
+.illustration {
+  text-align: "center";
+}
+
+@media (max-width: 768px) {
+  .content {
+    order: 3;
+  }
+
+  .illustration {
+    text-align: center;
+    order: 1;
+  }
+}

@@ -1,0 +1,20 @@
+.blue-green-gradient-bg {
+  background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+}
+
+.red-orange-gradient-bg {
+  background-image: linear-gradient(
+    180.3deg,
+    rgba(221, 221, 221, 1) 5.5%,
+    rgba(110, 136, 161, 1) 90.2%
+  );
+}
+
+.black-bg {
+  background-color: #000000;
+}
+
+.white-bg {
+  background-color: #ffffff;
+  color: #000000;
+}

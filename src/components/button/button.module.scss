@@ -1,0 +1,27 @@
+button {
+  position: relative;
+  display: inline-block;
+  padding: 0.6em 3em;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  transition: box-shadow 0.5s ease, transform 0.2s ease;
+  will-change: transform;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0))
+    rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+
+  &:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  &::after {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    will-change: transform;
+    transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0))
+      rotateY(var(--ry, 0));
+  }
+}

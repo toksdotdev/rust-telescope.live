@@ -1,0 +1,60 @@
+$height: 50px;
+$minWidth: 200px;
+$maxWidth: 100%;
+
+.nav,
+.nav h2 {
+  font-family: "Work Sans";
+  color: #ffffff;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 4% 0px 4% !important;
+
+  @media (max-width: 425px) {
+    .link {
+      display: block;
+    }
+  }
+
+  .link {
+    padding-left: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    flex-direction: column;
+    color: #ffffff;
+  }
+
+  .link:hover {
+    text-decoration: underline;
+  }
+}
+
+.left,
+.middle,
+.right {
+  height: $height;
+  min-width: $minWidth;
+  max-width: $maxWidth;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 3;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .right {
+    text-align: left;
+  }
+}
+
+.middle {
+  flex: 1;
+}

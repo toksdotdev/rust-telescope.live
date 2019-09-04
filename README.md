@@ -9,6 +9,11 @@
   Rust Telescope
 </h1>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c4ce0afd-b0e3-4268-8d2c-371e4437e5cb/deploy-status)](https://app.netlify.com/sites/rust-telescope/deploys)
+![GitHub stars](https://img.shields.io/github/stars/tnkemdilim/rust-telescope.live?style=flat-square)
+[![GitHub issues](https://img.shields.io/github/issues/tnkemdilim/rust-telescope.live.svg)](https://GitHub.com/tnkemdilim/rust-telescope.live/issues/)
+[![GitHub license](https://img.shields.io/github/license/tnkemdilim/rust-telescope.live.svg)](https://github.com/tnkemdilim/rust-telescope.live/blob/master/LICENSE)
+
 A bi-weekly and monthly video cast focused on:
 
 - Teaching Rust basics.

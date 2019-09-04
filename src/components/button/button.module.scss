@@ -1,11 +1,14 @@
-button {
+.button {
   position: relative;
   display: inline-block;
   padding: 0.6em 3em;
   cursor: pointer;
   border: none;
   border-radius: 20px;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  font-family: "Work Sans";
+  color: white;
+  background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+  // background: linear-gradient(135deg, #6e8efb, #a777e3);
   transition: box-shadow 0.5s ease, transform 0.2s ease;
   will-change: transform;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);

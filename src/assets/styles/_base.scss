@@ -6,8 +6,7 @@
 p,
 ul,
 li,
-input,
-button {
+input {
   font-family: $font-family-1;
 }
 
@@ -16,7 +15,20 @@ p {
   line-height: 2em;
 }
 
+.page {
+  height: 100vh;
+}
+
 .container {
+  padding: 3%;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
   padding: 3%;
   display: flex;
   justify-content: space-between;
@@ -51,4 +63,9 @@ p {
 
 .warning {
   color: orange;
+}
+
+.margin-top-bottom-small {
+  margin-top: 10%;
+  margin-bottom: 10%;
 }

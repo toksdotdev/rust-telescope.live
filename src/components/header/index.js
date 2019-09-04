@@ -4,33 +4,44 @@ import { Link } from "gatsby"
 import cx from "classnames"
 
 export default ({ type }) => (
-  <nav className={cx(styles.nav, { container: true, [`${type}-bg`]: true })}>
+  <nav className={cx(styles.nav, { section: true, [`${type}-bg`]: true })}>
     <div className={styles.left}>
-      <h2>🔭 Rust Telescope</h2>
+      <Link to="/" className={styles.brand}>
+        <h2>
+          <span role="img" aria-label="telescope">
+            🔭
+          </span>
+          &nbsp;Rust Telescope
+        </h2>
+      </Link>
     </div>
 
     <div className={styles.middle}></div>
 
     <div className={styles.right}>
-      <Link to="#" className={styles.link}>
+      <Link to="/interviews" className={styles.link}>
         Interviews
       </Link>
 
-      <Link to="#" className={styles.link}>
+      <Link to="/rust-a-little" className={styles.link}>
         Rust a Little
       </Link>
 
-      <Link to="#" className={styles.link}>
+      <Link to="/hacking-with-rust" className={styles.link}>
         Hacking With Rust
       </Link>
 
-      <Link to="#" className={styles.link}>
+      <Link to="/blog" className={styles.link}>
         Blog
       </Link>
 
-      <Link to="#" className={styles.link}>
+      <a
+        target="_"
+        href="https://www.patreon.com/rust_telescope"
+        className={cx(styles.link, styles.patreon)}
+      >
         Sponsor Us
-      </Link>
+      </a>
     </div>
   </nav>
 )

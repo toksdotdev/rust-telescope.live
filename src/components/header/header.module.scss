@@ -13,6 +13,10 @@ $maxWidth: 100%;
   flex-wrap: wrap;
   padding: 20px 4% 0px 4% !important;
 
+  .brand {
+    text-decoration: none;
+  }
+
   @media (max-width: 425px) {
     .link {
       display: block;
@@ -58,3 +62,8 @@ $maxWidth: 100%;
 .middle {
   flex: 1;
 }
+
+// .patreon {
+//   background-color: #f86754;
+//   // padding: 5px;
+// }

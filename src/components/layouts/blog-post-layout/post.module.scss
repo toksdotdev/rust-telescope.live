@@ -1,0 +1,11 @@
+.post-body {
+  padding: 5% 20%;
+
+  @media (max-width: 768px) {
+    padding: 10% 10%;
+  }
+}
+
+.disqus-comment-count {
+  float: right;
+}

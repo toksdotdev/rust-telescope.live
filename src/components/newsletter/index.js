@@ -3,6 +3,7 @@ import addToMailchimp from "gatsby-plugin-mailchimp"
 import styles from "./newsletter.module.scss"
 import Input from "../input"
 import cx from "classnames"
+import Button from "../button"
 
 export default () => {
   const [email, setEmail] = useState("")
@@ -24,7 +25,12 @@ export default () => {
 
   return (
     <form className={styles.former} onSubmit={_handleSubmit}>
-      <h3>📬 Subscribe To Our Newsletter</h3>
+      <h3>
+        <span role="img" aria-label="Mail">
+          📬
+        </span>{" "}
+        Subscribe To Our Newsletter
+      </h3>
 
       {status.result === "error" ? (
         <div className={cx(styles.warningText, "warning")}>{status.msg}</div>
@@ -39,7 +45,7 @@ export default () => {
         onChange={e => setEmail(e.target.value)}
       />
       <br />
-      <button type="submit">Suscribe</button>
+      <Button type="submit" text="Subscribe" />
     </form>
   )
 }

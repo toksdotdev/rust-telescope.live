@@ -60,13 +60,9 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date
-            firstname
-            lastname
+            creator
             thumbnail
-            social {
-              platform
-              username
-            }
+            twitter
           }
         }
       }

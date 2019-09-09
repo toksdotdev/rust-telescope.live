@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Header, Footer } from "../"
+import SEO from "../seo"
 
 export default function({ data, location }) {
   const {
@@ -8,20 +9,24 @@ export default function({ data, location }) {
   } = data
 
   return (
-    <div className="page">
-      <Header type="black" />
+    <React.Fragment>
+      <SEO frontmatter={data.mdx.frontmatter} isContent={true} />
 
-      <iframe
-        title={frontmatter.title}
-        width="100%"
-        height="72.2%"
-        frameBorder="0"
-        style={{ margin: 0, padding: 0, marginBottom: "-10px" }}
-        src={frontmatter.url}
-      ></iframe>
+      <div className="page">
+        <Header type="black" />
 
-      <Footer style={{ margin: 0 }} />
-    </div>
+        <iframe
+          title={frontmatter.title}
+          width="100%"
+          height="72.2%"
+          frameBorder="0"
+          style={{ margin: 0, padding: 0, marginBottom: "-10px" }}
+          src={frontmatter.url}
+        ></iframe>
+
+        <Footer style={{ margin: 0 }} />
+      </div>
+    </React.Fragment>
   )
 }
 

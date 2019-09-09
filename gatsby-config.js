@@ -7,10 +7,24 @@
 module.exports = {
   siteMetadata: {
     title: `Rust Telescope`,
-    siteUrl: `https://www.gatsbyjs.org`,
-    description: `A bi-weekly and monthly video series focused on educating new and experienced Rustaceans on Rustlang.`,
+    siteUrl: `https://www.rust-telescope.live`,
+    description: `A bi-weekly and monthly video cast focused on educating new and experienced Rustaceans on Rust programming language.`,
+    image: "https://lengstorf.com/images/jason-lengstorf.jpg",
+    author: {
+      name: "Tochukwu Nkemdilim",
+    },
+    organization: {
+      name: "Rust Telescope",
+      url: "https://rust-telescope.live",
+      logo: "https://lengstorf.com/android-chrome-512x512.png",
+    },
+    social: {
+      twitter: "@tnkemdilim",
+    },
   },
+
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,

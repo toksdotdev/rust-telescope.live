@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Header, Footer } from "../../"
 import styles from "./post.module.scss"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
+import SEO from "../../seo"
 
 export default function BlogPostLayout({ data, location }) {
   const {
@@ -22,28 +23,32 @@ export default function BlogPostLayout({ data, location }) {
   }
 
   return (
-    <div className="page">
-      <Header type="black" />
+    <React.Fragment>
+      <SEO frontmatter={data.mdx.frontmatter} isContent={true} />
 
-      <div className={styles.postBody}>
-        <h1>{title}</h1>
+      <div className="page">
+        <Header type="black" />
 
-        <CommentCount
-          className={styles.disqusCommentCount}
-          config={disqusConfig}
-          placeholder={"Counting Comments..."}
-        />
-        <br />
-        <br />
+        <div className={styles.postBody}>
+          <h1>{title}</h1>
 
-        <MDXRenderer>{body}</MDXRenderer>
-        <div className="margin-top-bottom-small" />
+          <CommentCount
+            className={styles.disqusCommentCount}
+            config={disqusConfig}
+            placeholder={"Counting Comments..."}
+          />
+          <br />
+          <br />
 
-        <Disqus config={disqusConfig} />
+          <MDXRenderer>{body}</MDXRenderer>
+          <div className="margin-top-bottom-small" />
+
+          <Disqus config={disqusConfig} />
+        </div>
+
+        <Footer />
       </div>
-
-      <Footer />
-    </div>
+    </React.Fragment>
   )
 }
 
@@ -60,7 +65,11 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        description
         date
+        creator
+        thumbnail
+        twitter
       }
     }
   }

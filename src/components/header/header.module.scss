@@ -17,10 +17,8 @@ $maxWidth: 100%;
     text-decoration: none;
   }
 
-  @media (max-width: 425px) {
-    .link {
-      display: block;
-    }
+  .nav-toggle {
+    visibility: hidden;
   }
 
   .link {
@@ -54,8 +52,41 @@ $maxWidth: 100%;
 }
 
 @media (max-width: 768px) {
+  .nav .brand {
+    display: inline-block;
+  }
+
+  .nav .nav-toggle {
+    padding: 0;
+    margin: 3px;
+    float: right;
+    cursor: pointer;
+    font-size: 1.5em;
+    visibility: visible;
+  }
+
   .right {
     text-align: left;
+    height: 0;
+    visibility: hidden;
+    max-height: 0px;
+    transition: max-height 0.7s ease;
+
+    .link {
+      display: block;
+      padding: 12px;
+      transition: visibility 0.7s ease;
+      visibility: hidden;
+    }
+  }
+
+  .right.toggled .link {
+    visibility: visible;
+  }
+
+  .right.toggled {
+    max-height: 100%;
+    visibility: visible;
   }
 }
 

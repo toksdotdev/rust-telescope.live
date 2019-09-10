@@ -67,15 +67,12 @@ $maxWidth: 100%;
 
   .right {
     text-align: left;
-    height: 0;
     visibility: hidden;
     max-height: 0px;
-    transition: max-height 0.7s ease;
 
     .link {
       display: block;
       padding: 12px;
-      transition: visibility 0.7s ease;
       visibility: hidden;
     }
   }

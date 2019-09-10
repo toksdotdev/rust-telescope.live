@@ -12,7 +12,7 @@ export default ({ data }) => {
       <div className="container">
         <br />
         <div style={{ paddingLeft: "1rem" }}>
-          <h2>Hacking With Rust</h2>
+          <h2>Interviews</h2>
           <p>
             Short interviews with Rustaceans, encompassing Rust adoption in
             companies or side projects.

@@ -33,7 +33,9 @@ export default () => (
             <li>Insightful interviews from Rust community members.</li>
           </ul>
 
-          <Button text="Get Started" />
+          <Link to="#rust-little">
+            <Button text="Get Started" />
+          </Link>
         </div>
       }
     />
@@ -41,6 +43,7 @@ export default () => (
     {/* Section 2 */}
     <Jumbotron
       background="white"
+      id="rust-little"
       reverse={true}
       size="large"
       illustration={

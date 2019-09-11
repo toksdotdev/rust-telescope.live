@@ -9,17 +9,23 @@ export default ({
   background = "blue-green-gradient",
   size = "medium",
   reverse = false,
-}) =>
-  reverse ? (
-    <Section className={cx("section", `section-${size}`, `${background}-bg`)}>
-      <div className={cx(styles.illustration, "flex-4")}>{illustration}</div>
-      <div className={"flex-1"}></div>
-      <div className={cx(styles.content, "flex-4")}>{content}</div>
-    </Section>
-  ) : (
-    <Section className={cx("section", "section-medium", `${background}-bg`)}>
-      <div className={cx(styles.content, "flex-3")}>{content}</div>
-      {/* <div className={"flex-1"}></div> */}
-      <div className={cx(styles.illustration, "flex-4")}>{illustration}</div>
-    </Section>
-  )
+  ...rest
+}) => (
+  <Section
+    className={cx("section", `section-${size}`, `${background}-bg`)}
+    {...rest}
+  >
+    {reverse ? (
+      <React.Fragment>
+        <div className={cx(styles.illustration, "flex-4")}>{illustration}</div>
+        <div className={"flex-1"}></div>
+        <div className={cx(styles.content, "flex-4")}>{content}</div>
+      </React.Fragment>
+    ) : (
+      <React.Fragment>
+        <div className={cx(styles.content, "flex-3")}>{content}</div>
+        <div className={cx(styles.illustration, "flex-4")}>{illustration}</div>
+      </React.Fragment>
+    )}
+  </Section>
+)

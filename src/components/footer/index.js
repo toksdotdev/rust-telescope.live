@@ -11,15 +11,17 @@ export default () => (
         <FontAwesomeIcon icon={faTwitter} />
       </Link>
 
-      <Link to="https://github.com/TNkemdilim/rust-telescope.live">
+      <a href="https://github.com/TNkemdilim/rust-telescope.live">
         <FontAwesomeIcon icon={faGithub} />
-      </Link>
+      </a>
     </div>
 
     <div className={footer.footerLeft}>
       <p className={footer.footerLinks}>
         <Link to="#">Home</Link> · <Link to="/blog">Blog</Link> ·{" "}
-        <Link to="#">Rust</Link>
+        <a target="_" href="https://www.rust-lang.org/">
+          Rust
+        </a>
         &nbsp;·&nbsp;
         <a target="_" href="https://users.rust-lang.org/">
           Rust Forum

@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Header, Footer } from "../../"
-import styles from "./post.module.scss"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
-import SEO from "../../seo"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import DefaultLayout from "../default.layout"
+import styles from "./post.module.scss"
 
 export default function BlogPostLayout({ data, location }) {
   const {
@@ -23,32 +22,24 @@ export default function BlogPostLayout({ data, location }) {
   }
 
   return (
-    <React.Fragment>
-      <SEO frontmatter={data.mdx.frontmatter} isContent={true} />
+    <DefaultLayout isContent={true} frontmatter={data.mdx.frontmatter}>
+      <div className={styles.postBody}>
+        <h1>{title}</h1>
 
-      <div className="page">
-        <Header type="black" />
+        <CommentCount
+          className={styles.disqusCommentCount}
+          config={disqusConfig}
+          placeholder={"Counting Comments..."}
+        />
+        <br />
+        <br />
 
-        <div className={styles.postBody}>
-          <h1>{title}</h1>
+        <MDXRenderer>{body}</MDXRenderer>
+        <div className="margin-top-bottom-small" />
 
-          <CommentCount
-            className={styles.disqusCommentCount}
-            config={disqusConfig}
-            placeholder={"Counting Comments..."}
-          />
-          <br />
-          <br />
-
-          <MDXRenderer>{body}</MDXRenderer>
-          <div className="margin-top-bottom-small" />
-
-          <Disqus config={disqusConfig} />
-        </div>
-
-        <Footer />
+        <Disqus config={disqusConfig} />
       </div>
-    </React.Fragment>
+    </DefaultLayout>
   )
 }
 

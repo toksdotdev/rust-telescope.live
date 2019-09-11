@@ -1,14 +1,13 @@
 import React from "react"
-import { Header, Footer, Card } from "../../components"
+import { Card } from "../../components"
 import { graphql } from "gatsby"
+import { DefaultLayout } from "../../components/layouts"
 
 export default ({ data }) => {
   const { edges: videos } = data.allMdx
 
   return (
-    <div>
-      <Header type="black" />
-
+    <DefaultLayout isContent={false}>
       <div className="container">
         <br />
         <div style={{ paddingLeft: "1rem" }}>
@@ -47,9 +46,7 @@ export default ({ data }) => {
           })}
         </div>
       </div>
-
-      <Footer />
-    </div>
+    </DefaultLayout>
   )
 }
 

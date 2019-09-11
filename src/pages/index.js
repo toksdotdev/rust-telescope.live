@@ -1,17 +1,16 @@
 import React from "react"
-import { Header, Footer, Jumbotron, Button, Newsletter } from "../components"
+import { Jumbotron, Button, Newsletter } from "../components"
 import HackingWithRustSvg from "../assets/svgs/hacking-with-rust.svg"
 import PairProgramSvg from "../assets/svgs/pair-programming.svg"
 import RustExpertsSvg from "../assets/svgs/rust-experts.svg"
 import RustLittleSvg from "../assets/svgs/rust-a-little.svg"
+import { DefaultLayout } from "../components/layouts"
 import styles from "./index.module.scss"
 import "../assets/styles/main.scss"
 import { Link } from "gatsby"
 
 export default () => (
-  <div className="page">
-    <Header type="black" />
-
+  <DefaultLayout isContent={false}>
     {/* Section 1 */}
     <Jumbotron
       illustration={
@@ -136,7 +135,5 @@ export default () => (
     >
       <Newsletter />
     </div>
-
-    <Footer />
-  </div>
+  </DefaultLayout>
 )

@@ -1,15 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Header, Footer } from "../../components"
 import { Card } from "../../components"
+import { DefaultLayout } from "../../components/layouts"
 
 export default function({ data }) {
   const { edges: posts } = data.allMdx
 
   return (
-    <div className="page">
-      <Header type="black" />
-
+    <DefaultLayout isContent={false}>
       <div className="container">
         <br />
 
@@ -41,9 +39,7 @@ export default function({ data }) {
           })}
         </div>
       </div>
-
-      <Footer />
-    </div>
+    </DefaultLayout>
   )
 }
 

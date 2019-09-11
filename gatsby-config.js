@@ -76,13 +76,13 @@ module.exports = {
           "./src/components/layouts/blog-post-layout/index.js"
         ),
         "hacking-with-rust": require.resolve(
-          "./src/components/layouts/video-layout.js"
+          "./src/components/layouts/video.layout.js"
         ),
         "rust-little": require.resolve(
-          "./src/components/layouts/video-layout.js"
+          "./src/components/layouts/video.layout.js"
         ),
-        interviews: require.resolve("./src/components/layouts/video-layout.js"),
-        default: require.resolve("./src/components/layouts/default-layout.js"),
+        interviews: require.resolve("./src/components/layouts/video.layout.js"),
+        default: require.resolve("./src/components/layouts/default.layout.js"),
         mdPlugins: [
           require("remark-images"),
           require("remark-emoji"),

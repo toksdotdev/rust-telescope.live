@@ -8,15 +8,15 @@ const routing = {
   },
   "/contents/rust-a-little/": {
     base: "rust-a-little",
-    layout: path.resolve("./src/components/layouts/video-layout.js"),
+    layout: path.resolve("./src/components/layouts/video.layout.js"),
   },
   "/contents/interviews/": {
     base: "interviews",
-    layout: path.resolve("./src/components/layouts/video-layout.js"),
+    layout: path.resolve("./src/components/layouts/video.layout.js"),
   },
   "/contents/hacking-with-rust/": {
     base: "hacking-with-rust",
-    layout: path.resolve("./src/components/layouts/video-layout.js"),
+    layout: path.resolve("./src/components/layouts/video.layout.js"),
   },
 }
 

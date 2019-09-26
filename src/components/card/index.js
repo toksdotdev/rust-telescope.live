@@ -57,9 +57,9 @@ export default ({
             </h1>
 
             <p className={styles.text}>
-              {description.length <= 120
+              {description.length <= 190
                 ? description
-                : `${description.substring(0, 128)}...`}
+                : `${description.substring(0, 190)}...`}
             </p>
 
             <Link to={url} className={styles.button}>

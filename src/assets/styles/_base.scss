@@ -8,15 +8,17 @@ html {
 }
 
 p,
+a,
 ul,
 li,
+span,
 input {
   font-family: $font-family-1;
 }
 
 p {
   font-size: 18px;
-  line-height: 2em;
+  line-height: 1.8em;
 }
 
 .page {
